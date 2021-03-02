@@ -1,0 +1,27 @@
+<div id="PopUpFad">
+  <div class="login-header">
+    <i id="closeLoginModal" class="fas fa-times-circle close-icon"></i>
+    <div (click)="close()" class="img-container">
+      <img
+
+        src="https://media-exp1.licdn.com/dms/image/C4E35AQGuMM9ZxDkwyw/profile-framedphoto-shrink_100_100/0/1603899647645?e=1614780000&v=beta&t=nJw7RZwU104rQTEuwk1de9QkTUZv9Wr6tGnt3zGZ9-M"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <div style="width: 94%;    margin-left: 5px;
+  ">
+    <span class="login">Login</span>
+
+    <form [formGroup]="userLoginForm" (ngSubmit)="submitLogin()"  style="position: relative;">
+      <input formControlName="email" type="text" placeholder="Email" />
+     
+        <small class="warning" *ngIf="email && email.invalid && (email.dirty || email.touched)" > email required</small>
+    
+      <input formControlName="password" type="text" placeholder="Password" />
+        <small class="warning" *ngIf="password && password.invalid && (password.dirty || password.touched)" > password required</small>
+     <div style="text-align: right;"> <button [disabled]="userLoginForm.invalid" type="submit">login</button></div>
+    </form>
+  </div>
+</div>

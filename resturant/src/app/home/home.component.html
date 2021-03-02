@@ -1,0 +1,244 @@
+<span *ngIf = "!serverError" > {{serverError}} </span>
+
+<span id="container"  *ngIf = "serverError" >
+    <span  > <!-- *ngFor="let restaurant of  mainRestaurantResponse" -->
+    <div class="img-profile"> 
+      <h2 class="language-selector" >Ar</h2>
+      <img (click)="openLoginModal()" style="width: 100%; height: auto" src="assets/images/bk.png" alt="" />
+    </div>
+    
+    <div class="container-main">
+      <div class="container-main-header">
+        <div>
+            <span class="resturant-name">  Macdonalds</span> <!--*ngIf="restaurant.useArabicLanguage" {{restaurant.nameAr}}
+{{restaurant.nameAr}} -->
+            <span  class="resturant-name">  Macdonalds</span> <!--*ngIf="restaurant.useEnglishLanguage" -->
+          <div class="search-box-container">
+            <div class="time-main-div">
+              <span class="resturant-work-time">11Am - 11Pm</span>
+              <div class="div-clock-shape">
+                <i class="i-clock" class="fas fa-clock"></i>
+              </div>
+              <span class="resturant-work-time">11Am - 11Pm</span>
+              <div class="rating">
+                <i
+                  style="padding: 6px; color: white; font-size: 11px"
+                  class="fas fa-star"
+                ></i>
+                <div style="color: white; font-size: 11px; display: inline-block">
+                  4.4
+                </div>
+              </div>
+            </div>
+    
+            <div class="dummy">
+              <div style="position: relative; width: 75%; display: inline-block">
+              
+    
+                <i id="search" class="fas fa-search"></i>
+    
+                <input
+                  type="text"
+                  placeholder="search"
+                  class="search"
+                  name="search"
+                  (keyup)="Search()"
+                  [(ngModel)]="searchTxt"
+                />
+              </div>
+              <div
+                style="
+                  position: absolute;
+                  margin: 13px 0px;
+                  background-color: white;
+                "
+                class="rating"
+              >
+                <i
+                  style="float: right; font-size: 21px; margin-right: 11px"
+                  class="fas fa-question-circle"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="parent">
+        <div class="child">
+        
+          <div (click)="scrollToElement('3')" class="menu-button-select">
+          <div class="box-name" >breakfast</div>
+          </div>
+          <div (click)="scrollToElement('3')" class="menu-button-select">
+            <div class="box-name" >breakfast</div>
+            </div>
+          <div class="menu-button-select">
+          <div class="box-name" >breakfast</div>
+          </div>
+          <div class="menu-button-select">
+          <div class="box-name" >breakfast</div>
+          </div>
+          <div class="menu-button-select">
+          <div class="box-name" >breakfast</div>
+          </div>
+          <div class="menu-button-select">
+          <div class="box-name" >breakfast</div>
+          </div>
+          <div class="menu-button-select">
+          <div class="box-name" >breakfast</div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- start loop foreach category  -->
+      <div class="container-1"> 
+      
+        <div class="resturant-name box-2" >category name </div>
+        <!-- start loop for display items -->
+        <div class="box-2">
+          <div class="container-2-flex-item">
+            <div class="container-2-flex-item-box1">
+              <img
+                style="width: 79px; height: 91px; padding: 31px 15px 17px 0px"
+                src="assets/images/bk.png"
+                alt=""
+              />
+            </div>
+            <div container-2-flex-item-box2>
+              <h3 class="meal-name">Box title</h3>
+              <p class="meals-description">
+                lorem ipsum dolor sit amet , constrcror asdkfjhadsf lorem ipsum
+                dolor sit amet , constrcror asdkfjhadsf elite
+              </p>
+              <span class="meals-price">2.54 JOD</span>
+            </div>
+          </div>
+        </div>
+    
+        <div class="box-2">
+          <div class="container-2-flex-item">
+            <div class="container-2-flex-item-box1">
+              <img
+                style="width: 79px; height: 91px; padding: 31px 15px 17px 0px"
+                src="assets/images/bk.png"
+                alt=""
+              />
+            </div>
+            <div container-2-flex-item-box2>
+              <h3 class="meal-name">Box title</h3>
+              <p class="meals-description">
+                lorem ipsum dolor sit amet , constrcror asdkfjhadsf lorem ipsum
+                dolor sit amet , constrcror asdkfjhadsf elite
+              </p>
+              <span class="meals-price">2.54 JOD</span>
+            </div>
+          </div>
+        </div>
+    
+        <div class="box-2">
+          <div class="container-2-flex-item">
+            <div class="container-2-flex-item-box1">
+              <img
+                style="width: 79px; height: 91px; padding: 31px 15px 17px 0px"
+                src="assets/images/bk.png"
+                alt=""
+              />
+            </div>
+            <div container-2-flex-item-box2>
+              <h3 class="meal-name">Box title</h3>
+              <p class="meals-description">
+                lorem ipsum dolor sit amet , constrcror asdkfjhadsf lorem ipsum
+                dolor sit amet , constrcror asdkfjhadsf elite
+              </p>
+              <span class="meals-price">2.54 JOD</span>
+            </div>
+          </div>
+        </div>
+    
+        <div class="box-2">
+          <div class="container-2-flex-item">
+            <div class="container-2-flex-item-box1">
+              <img
+                style="width: 79px; height: 91px; padding: 31px 15px 17px 0px"
+                src="assets/images/bk.png"
+                alt=""
+              />
+            </div>
+            <div [id]="" container-2-flex-item-box2>
+              <h3 class="meal-name">Box title</h3>
+              <p class="meals-description">
+                lorem ipsum dolor sit amet , constrcror asdkfjhadsf lorem ipsum
+                dolor sit amet , constrcror asdkfjhadsf elite
+              </p>
+              <span class="meals-price">2.54 JOD</span>
+            </div>
+          </div>
+        </div>
+    
+        <div class="box-2">
+          <div class="container-2-flex-item">
+            <div class="container-2-flex-item-box1">
+              <img
+                style="width: 79px; height: 91px; padding: 31px 15px 17px 0px"
+                src="assets/images/bk.png"
+                alt=""
+              />
+            </div>
+            <div id="3" container-2-flex-item-box2>
+              <h3 class="meal-name">Box title</h3>
+              <p class="meals-description">
+                lorem ipsum dolor sit amet , constrcror asdkfjhadsf lorem ipsum
+                dolor sit amet , constrcror asdkfjhadsf elite
+              </p>
+              <span class="meals-price">2.54 JOD</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="box-2">
+            <div class="container-2-flex-item">
+              <div class="container-2-flex-item-box1">
+                <img
+                  style="width: 79px; height: 91px; padding: 31px 15px 17px 0px"
+                  src="assets/images/bk.png"
+                  alt=""
+                />
+              </div>
+              <div id="3" container-2-flex-item-box2>
+                <h3 class="meal-name">Box title</h3>
+                <p class="meals-description">
+                  lorem ipsum dolor sit amet , constrcror asdkfjhadsf lorem ipsum
+                  dolor sit amet , constrcror asdkfjhadsf elite
+                </p>
+                <span class="meals-price">2.54 JOD</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="box-2">
+            <div class="container-2-flex-item">
+              <div class="container-2-flex-item-box1">
+                <img
+                  style="width: 79px; height: 91px; padding: 31px 15px 17px 0px"
+                  src="assets/images/bk.png"
+                  alt=""
+                />
+              </div>
+              <div id="3" container-2-flex-item-box2>
+                <h3 class="meal-name">Box title</h3>
+                <p class="meals-description">
+                  lorem ipsum dolor sit amet , constrcror asdkfjhadsf lorem ipsum
+                  dolor sit amet , constrcror asdkfjhadsf elite
+                </p>
+                <span class="meals-price">2.54 JOD</span>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+</span>
+</span>
+<app-login id="LoginModal" class="Modal is-hidden is-visuallyHidden" ></app-login>
+<!--  (closeLoginModal)="closeLoginModal()" -->
